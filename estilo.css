@@ -1,0 +1,174 @@
+/* Fonte padrão e reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(270deg, #0b1f3a, #0d2b55, #001f33);
+  background-size: 600% 600%;
+  animation: rgbBackground 12s ease infinite;
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+/* Animação de fundo RGB */
+@keyframes rgbBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 40px 0;
+  background: #0d2b55;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+header .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #fff;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-style: italic;
+  color: #b0d4ff;
+}
+
+/* Navegação */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  background: #092340;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #aad4ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 0;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  border-bottom: 2px solid #2a6cb3;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #aad4ff;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Projetos */
+article {
+  background: #122e52;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+article:hover {
+  transform: scale(1.02);
+}
+
+/* Aside */
+aside {
+  background: #09233d;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 20px auto;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+aside a {
+  color: #79c0ff;
+  text-decoration: none;
+}
+
+aside a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #06172b;
+  font-size: 0.9em;
+  color: #8bb7e6;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  article {
+    padding: 10px;
+  }
+}
